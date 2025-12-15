@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify Email</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background-color: #f8f9fa; padding: 20px; text-align: center; }
+        .content { padding: 30px 20px; }
+        .button { 
+            display: inline-block; 
+            padding: 12px 24px; 
+            background-color: #28a745; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            margin: 20px 0; 
+        }
+        .footer { 
+            margin-top: 30px; 
+            padding-top: 20px; 
+            border-top: 1px solid #eee; 
+            font-size: 12px; 
+            color: #666; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Fashion Store</h1>
+        </div>
+        <div class="content">
+            <h2>Xác thực email</h2>
+            <p>Xin chào,</p>
+            <p>Cảm ơn bạn đã đăng ký tài khoản tại Fashion Store!</p>
+            <p>Vui lòng nhấp vào nút bên dưới để xác thực địa chỉ email của bạn:</p>
+            <p>
+                <a th:href="${verificationLink}" class="button">Xác thực Email</a>
+            </p>
+            <p>Nếu nút trên không hoạt động, bạn có thể sao chép và dán đường link sau vào trình duyệt:</p>
+            <p><code th:text="${verificationLink}"></code></p>
+            <p>Liên kết này sẽ hết hạn sau 24 giờ.</p>
+            <p>Nếu bạn không đăng ký tài khoản tại Fashion Store, vui lòng bỏ qua email này.</p>
+            <p>Trân trọng,<br>Đội ngũ Fashion Store</p>
+        </div>
+        <div class="footer">
+            <p>© 2024 Fashion Store. Tất cả các quyền được bảo lưu.</p>
+            <p>Đây là email tự động, vui lòng không trả lời email này.</p>
+        </div>
+    </div>
+</body>
+</html>
